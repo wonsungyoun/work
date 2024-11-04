@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: 'work'
+  sql:
+    init:
+      mode: 'always'
+  datasource:
+    driver-class-name: 'com.mysql.cj.jdbc.Driver'
+    url: 'jdbc:mysql://mysql:3306/db1'
+    username: 'root'
+    password: 'ably123!'
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: 'org.hibernate.dialect.MySQL8Dialect'
+    defer-datasource-initialization: true
+
+jwt:
+  grantType : "Bearer "
+  issuer : test@test.com
+  secret-key: rkGU45258GGhiolLO2465TFY5345kGU45258GGhiolLO2465TFY5345
+  expiration: 1800000000 # 30 minutes
+  refresh:
+    expiration: 604800000 # 7 days
